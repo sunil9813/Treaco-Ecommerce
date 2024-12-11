@@ -1,0 +1,233 @@
+.hero {
+  overflow-x: hidden;
+  .box {
+    width: 100%;
+    height: 90vh;
+  }
+  .img {
+    height: 90vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.next-arrow,
+.prev-arrow {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  margin: 20px;
+}
+.prev-arrow {
+  left: 0;
+  z-index: 50;
+}
+.offer {
+  padding: 50px 0;
+  .wrapper {
+    margin-top: 30px;
+    .slick-slide > div {
+      margin: 10px;
+    }
+    img {
+      border-radius: 10px;
+    }
+  }
+  .flaseSale {
+    margin: 0 10px;
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+    .imageWrapper {
+      width: 70%;
+      height: 40vh;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+    .products {
+      height: 40vh;
+      padding: 30px;
+      border: 1px solid rgba(128, 128, 128, 0.308);
+      width: 30%;
+      border-radius: 10px;
+      .product {
+        margin: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 180px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        .img {
+          width: 40%;
+          height: 180px;
+          border-radius: 10px 0 0 10px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px 0 0 10px;
+          }
+        }
+        .details {
+          width: 60%;
+          padding: 15px;
+          p {
+            margin: 7px 0 20px 0;
+          }
+          .price {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+        }
+      }
+      .progress {
+        margin-top: 30px;
+        .flex {
+          display: flex;
+          justify-content: space-between;
+          font-size: 0.9rem;
+          margin-bottom: 20px;
+        }
+        .progressBar {
+          position: relative;
+          background: #e0e0e0;
+          border-radius: 30px;
+          height: 18px;
+          overflow: hidden;
+        }
+        .progressFill {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: #000; /* Dynamic progress bar color */
+          transition: width 0.4s ease;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    .box {
+      height: 40vh;
+    }
+    .img {
+      height: 40vh;
+    }
+  }
+  .offer {
+    .flaseSale {
+      margin: 0;
+      .content {
+        flex-direction: column;
+        gap: 0;
+        .products {
+          width: 100%;
+        }
+        .imageWrapper {
+          width: 100%;
+          height: 30vh;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .offer {
+    .flaseSale {
+      .content {
+        .imageWrapper {
+          height: 20vh;
+        }
+      }
+    }
+  }
+}
+.offer-arrow {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 30%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.offer-arrow.next-arrow {
+  right: -35px;
+}
+.offer-arrow.prev-arrow {
+  left: -35px;
+}
+.offer .wrapper .next-arrow {
+  right: -35px;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.offer .wrapper .prev-arrow {
+  left: -35px;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.imageWrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border: none;
+  outline: none;
+}
+
+.imageWrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.animatedBg {
+  position: absolute;
+  top: -37%;
+  left: -200px; /* Start off-screen on the left */
+  width: 200px;
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  transform: rotate(25deg) translateX(0);
+  transition: transform 0.3s ease; /* Fast transition */
+  opacity: 0;
+}
+
+.imageWrapper:hover .animatedBg {
+  opacity: 1;
+  animation: slideBg 0.5s ease-out forwards; /* Shorter duration for faster effect */
+}
+
+@keyframes slideBg {
+  from {
+    left: -200px;
+    transform: rotate(25deg) translateX(0);
+  }
+  to {
+    left: 100%;
+    transform: rotate(25deg) translateX(100%);
+  }
+}

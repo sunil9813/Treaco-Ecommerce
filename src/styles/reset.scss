@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+button,
+input {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+}
+::placeholder {
+  font-size: 17px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(90, 90, 90);
+}
+.underline {
+  color: rgb(112, 112, 112);
+  text-decoration: line-through solid rgb(112, 112, 112);
+  font-size: 16px;
+  font-weight: 400;
+}
+.price-tag {
+  font-size: 20px;
+  font-weight: 500;
+}

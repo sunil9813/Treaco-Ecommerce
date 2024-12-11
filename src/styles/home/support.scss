@@ -1,0 +1,57 @@
+.support {
+  padding: 50px 0;
+  .text {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    h1 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 20px;
+    }
+  }
+  .img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    img {
+      width: 50%;
+      height: 100%;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 40px;
+    background: #212121;
+    width: 100%;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 17px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .support {
+    .text {
+      width: 100%;
+    }
+    .img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
